@@ -9,7 +9,6 @@
     "local"
   ],
   "name": {
-    "en": "HEMS Homey",
     "en": "HEMS Homey"
   },
   "description": {
@@ -28,5 +27,33 @@
   "author": {
     "name": "Erwin Rensink",
     "email": "erwinrensink@gmail.com"
-  }
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Hoymiles DTU",
+        "nl": "Hoymiles DTU"
+      },
+      "class": "solarpanel",
+      "capabilities": [
+        "meter_power",
+        "measure_power"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices"
+        }
+      ],
+      "images": {
+        "small": "/drivers/hoymiles-dtu/assets/images/small.png",
+        "large": "/drivers/hoymiles-dtu/assets/images/large.png",
+        "xlarge": "/drivers/hoymiles-dtu/assets/images/xlarge.png"
+      },
+      "id": "hoymiles-dtu"
+    }
+  ]
 }

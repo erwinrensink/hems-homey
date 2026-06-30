@@ -2,13 +2,13 @@
 
 const Homey = require('homey');
 
-module.exports = class MyDevice extends Homey.Device {
+module.exports = class HoymilesDTUDevice extends Homey.Device {
 
   /**
    * onInit is called when the device is initialized.
    */
   async onInit() {
-    this.log('MyDevice has been initialized');
+    this.log('Hoymiles DTU Device initialized');
   }
 
   /**

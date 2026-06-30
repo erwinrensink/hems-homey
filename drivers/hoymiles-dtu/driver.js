@@ -2,13 +2,13 @@
 
 const Homey = require('homey');
 
-module.exports = class MyDriver extends Homey.Driver {
+module.exports = class HoymilesDTUDriver extends Homey.Driver {
 
   /**
    * onInit is called when the driver is initialized.
    */
   async onInit() {
-    this.log('MyDriver has been initialized');
+    this.log('Hoymiles DTU Driver initialized');
   }
 
   /**
@@ -17,18 +17,14 @@ module.exports = class MyDriver extends Homey.Driver {
    * This should return an array with the data of devices that are available for pairing.
    */
   async onPairListDevices() {
-    return [
-      // Example device data, note that `store` is optional
-      // {
-      //   name: 'My Device',
-      //   data: {
-      //     id: 'my-device',
-      //   },
-      //   store: {
-      //     address: '127.0.0.1',
-      //   },
-      // },
-    ];
+
+    return [{
+      name: 'Hoymiles DTU',
+      data: {
+        id: 'hoymiles-dtu',
+      },
+    }];
+
   }
 
 };
